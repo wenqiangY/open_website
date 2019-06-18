@@ -1,0 +1,23 @@
+{
+  "name": "ubibi.cn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "node ./server/beecall_node_server.js",
+    "build_home_mobile": "webpack -p static/src/home_mobile.js static/asset/home_mobile.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-kit": "^1.0.9",
+    "http-proxy-middleware": "^0.18.0"
+  },
+  "devDependencies": {
+    "pm2": "^2.9.1"
+  }
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>Beecall</title>
+    <link rel="stylesheet" href="/static/res/lib/swiper/swiper.min.css">
+    <style>
+        html,body,div,p,li,ul{padding:0;margin:0}html,body{width:100%;font-family:"Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif}body.language_zh{font-family:"Microsoft YaHei","Helvetica Neue",Helvetica,"Hiragino Sans GB",Arial,sans-serif}a{color:#01bcd7;text-decoration:none;line-height:20px}h2{color:#2a394c;font-size:20px;line-height:42px;margin:18px 0}.clear{height:1px;clear:both}.clear40{height:40px;clear:both}.clear80{height:80px;clear:both}.clear50{height:50px;clear:both}.clear20{height:20px;clear:both}.clear10{height:10px;clear:both}#header_web{display:none}.header_img_web,.header_img{width:100%}.mm_cc{max-width:900px;margin:0 auto 20px auto}.mm_ccw{margin:0 20px}.mm_cc p{color:#8492a4;font-size:16px;line-height:28px;margin:20px 0}#mm1 p{text-align:center;font-size:24px;color:#2a394c;margin:0}#mm2{text-align:center;margin:20px auto 35px auto}#mm2 p{margin:0}#mm4{margin-bottom:70px}#mm4 a{display:block;width:200px;height:40px;border-radius:100px;background-color:#00bcd7;color:#fff;line-height:40px;text-align:center;margin:20px auto;font-size:14px}#mm8{background-color:#f9fbfc;padding:40px 0}.mm8_chat{margin:0 20px}.mm8_chat .avatar{display:block;width:35px;height:35px}.mm8_chat_left img{float:left}.mm8_chat_right img{float:right}#mm8 .dialog{width:186px}.mm9_block_left{float:left}.mm9_block_right{float:right}#mm9 .h3w{height:82px;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center}#mm9 .h3{color:#8492a4;font-size:13px;text-align:center}.mm9_icon{width:64px;height:64px;background-color:#e6f1f2;border-radius:100px;margin:20px auto 0 auto}.mm9_icon img{display:block;width:100%}.mm9_block{width:149px;background:#fff;box-shadow:0 1px 3px 0 rgba(0,0,0,0.20);border-radius:6px}#mm11{background-color:#f9fbfc}#mm11 .mm_cc{margin-bottom:0}.mm11_video_cover{width:100%;max-width:700px;margin:35px auto;display:block}.mm11_video_cover_w{max-width:700px;margin:0 auto}.language_zh #mm9 .h3{font-size:18px}#mm6{position:relative}#mm6_bg{width:100%;height:180px;position:absolute;z-index:1;top:26px;left:0}.mm6_bg1{background-color:#b3ebf3;border-radius:5px;width:96%;margin:0 auto;height:100%}.mm6_content{position:relative}.mm6_swiper{width:90%;margin:0 auto}.mm6_swiper_content{margin:0 15px;line-height:24px}.language_en .mm6_swiper_content{font-size:14px;line-height:20px}.swiper-container{max-width:100%;height:240px;max-height:100%;margin:10px auto}.swiper-slide{background-color:#01bcd7;color:#fff;border-radius:5px;text-align:center;font-size:16px;height:230px;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.swiper-pagination-bullet{width:15px;height:15px;margin:0 7px}.swiper-pagination-bullet-active{background:#01bcd7}.swiper-pagination{bottom:-30px;left:0;width:100%}#mm8_web{background-color:#f9fbfc;display:none;padding:80px 0;width:100%;max-width:99999px}#mm8_web img{display:block;margin:0 auto}.footer{width:100%;height:70px;line-height:70px;background-color:#e6ebec}.footer .mm_cc{margin:0 auto;padding:0}.footer .mm_ccc{margin:0 20px}.footer a{display:inline-block;margin-left:15px;color:#444c56}.footer_left{float:left;color:#444c56}.footer_right{float:right}.footer a.footer_current{color:#4d9bff}@media screen and (max-width:900px){#mm4{margin-bottom:50px}h2{margin-top:40px;line-height:24px;margin-bottom:20px}#mm9 h2{margin-bottom:35px}}@media screen and (min-width:900px){.mm_cc{margin:0 auto 100px auto}.mm_cc p{font-size:20px}#mm1{margin-bottom:35px;margin-top:5px}#mm1 p{font-size:30px}#mm2{margin-bottom:40px}#mm2 p{font-size:22px}#mm8{display:none}#mm8_web{display:block}#header{display:none}#header_web{display:block}#mm4{width:560px;margin:0 auto}#mm4 a{height:52px;line-height:52px;float:left;margin:0;font-size:18px;width:260px}#mm4 .white_paper{margin-left:30px}.mm9_cc_md{display:none}.mm9_block{width:199px;margin-right:19px}.mm9_icon{width:88px;height:88px;margin-top:30px}.mm9_block_right{float:left}.mm9_block_last{margin-right:0}#mm9 .h3w{height:115px}.language_en #mm9 .h3{font-size:16px}#mm6{margin-bottom:30px}.mm6_swiper_content{margin:0 70px;font-size:18px!important;line-height:28px}h2{text-align:center;font-size:30px;margin-top:100px;margin-bottom:40px}h2.about_soma{margin-top:80px}}
+    </style>
+</head>
+<body class="language_<%- siteLanguage %>">
+
+<div class="mainContent">
+
+    <div id="header" class="mm_cc">
+        <img class="header_img" src="/static/res/images/uis/AD.png" alt="">
+    </div>
+    <div id="header_web">
+        <img class="header_img_web" src="/static/res/images/uis_web/AD.png" alt="">
+    </div>
+
+    <div id="mm1" class="mm_cc">
+        <p>Link People</p>
+        <p>Link Digital Life</p>
+    </div>
+
+    <div id="mm2" class="mm_cc">
+        <p><%- i18n.mm2_1 %></p>
+        <p><%- i18n.mm2_2 %></p>
+    </div>
+
+
+    <div id="mm4" class="mm_cc">
+        <a href="https://SOMA.im/"><%- i18n.mm4_1 %></a>
+
+        <% if(siteLanguage==='zh') { %>
+        <a href="/static/res/download/white_paper_zh.pdf" class="white_paper">
+            <%- i18n.mm4_2 %>
+        </a>
+        <%} else {%>
+        <a href="/static/res/download/white_paper_en.pdf" class="white_paper">
+            <%- i18n.mm4_2 %>
+        </a>
+        <%}%>
+
+        <div class="clear"></div>
+    </div>
+
+    <div>
+
+    </div>
+
+
+    <div id="mm5" class="mm_cc">
+        <div class="mm_ccw">
+            <h2><%- i18n.mm5_1 %> </h2>
+            <p>
+                <%- i18n.mm5_2 %>
+            </p>
+        </div>
+    </div>
+
+
+    <div id="mm6" class="mm_cc">
+        <div class="mm_ccw">
+            <h2>
+                <%- i18n.mm6_1 %>
+            </h2>
+            <div class="mm6_content">
+                <div id="mm6_bg">
+                    <div class="mm6_bg1"></div>
+                </div>
+                <div class="mm6_swiper">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><div class="mm6_swiper_content"><%- i18n.mm6_01 %></div></div>
+                            <div class="swiper-slide"><div class="mm6_swiper_content"><%- i18n.mm6_02 %></div></div>
+                            <div class="swiper-slide"><div class="mm6_swiper_content"><%- i18n.mm6_03 %></div></div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="mm14" class="mm_cc">
+
+        <div class="mm_ccw">
+            <h2>
+                <%- i18n.mm14_1 %>
+            </h2>
+            <p>
+                <%- i18n.mm14_2 %>
+            </p>
+            <p>
+                <%- i18n.mm14_3 %>
+            </p>
+        </div>
+
+    </div>
+
+
+
+    <div id="mm8_web" class="mm_cc">
+        <img src="/static/res/images/uis_web/ic_group_chat_2x.png" style="width: 768px" alt="">
+    </div>
+
+
+    <div id="mm8" class="mm_cc">
+
+        <div class="mm8_chat mm8_chat_left">
+            <img class="avatar" src="/static/res/images/uis/ic_avatar1@2x.png" alt="">
+            <img class="dialog" src="/static/res/images/uis/ic_dialogueic1@2x.png" alt="">
+        </div>
+
+        <div class="clear20"></div>
+
+        <div class="mm8_chat mm8_chat_right">
+            <img class="avatar" src="/static/res/images/uis/ic_avatar2@2x.png" alt="">
+            <img class="dialog" src="/static/res/images/uis/ic_dialogueic2@2x.png" alt="">
+        </div>
+
+        <div class="clear20"></div>
+
+        <div class="mm8_chat mm8_chat_left">
+            <img class="avatar" src="/static/res/images/uis/ic_avatar3@2x.png" alt="">
+            <img class="dialog" src="/static/res/images/uis/ic_dialogueic3@2x.png" alt="" style="width:145px;">
+        </div>
+
+        <div class="clear20"></div>
+
+        <div class="mm8_chat mm8_chat_right">
+            <img class="avatar" src="/static/res/images/uis/ic_avatar4@2x.png" alt="">
+            <img class="dialog" src="/static/res/images/uis/ic_dialogueic4@2x.png" alt="">
+        </div>
+
+        <div class="clear20"></div>
+
+        <div class="mm8_chat mm8_chat_left">
+            <img class="avatar" src="/static/res/images/uis/ic_avatar5@2x.png" alt="">
+            <img class="dialog" src="/static/res/images/uis/ic_dialogueic5@2x.png" alt="">
+        </div>
+
+        <div class="clear20"></div>
+
+    </div>
+
+
+    <div id="mm15" class="mm_cc">
+        <div class="mm_ccw">
+            <h2>
+                <%- i18n.mm15_1 %>
+            </h2>
+            <p>
+                <%- i18n.mm15_2 %>
+            </p>
+        </div>
+
+    </div>
+
+
+    <div id="mm9" class="mm_cc">
+        <div class="mm_ccw">
+            <h2>
+                <%- i18n.mm9_0 %>
+            </h2>
+            <div class="mm9_cc">
+                <div class="mm9_block mm9_block_left">
+                    <div class="mm9_icon">
+                        <img src="/static/res/images/uis_web/ic_information.png" alt="">
+                    </div>
+                    <div class="h3w">
+                        <div class="h3">
+                            <%- i18n.mm9_1 %>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mm9_block mm9_block_right">
+                    <div class="mm9_icon">
+                        <img src="/static/res/images/uis_web/ic_reward.png" alt="">
+                    </div>
+                    <div class="h3w">
+                        <div class="h3">
+                            <%- i18n.mm9_2 %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear20 mm9_cc_md"></div>
+
+            <div class="mm9_cc">
+                <div class="mm9_block mm9_block_left">
+                    <div class="mm9_icon">
+                        <img src="/static/res/images/uis_web/ic_exchange.png" alt="">
+                    </div>
+                    <div class="h3w">
+                        <div class="h3">
+                            <%- i18n.mm9_3 %>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mm9_block mm9_block_right mm9_block_last">
+                    <div class="mm9_icon">
+                        <img src="/static/res/images/uis_web/ic_aid.png" alt="">
+                    </div>
+                    <div class="h3w">
+                        <div class="h3">
+                            <%- i18n.mm9_4 %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear20"></div>
+        </div>
+    </div>
+
+
+    <div id="mm11" >
+        <div class="mm_cc">
+            <div class="mm_ccw">
+                <div class="clear"></div>
+                <h2 class="about_soma">
+                    <%- i18n.mm11_0 %>
+                </h2>
+                <p>
+                    <%- i18n.mm11_1 %>
+                </p>
+                <p>
+                    <%- i18n.mm11_2 %>
+                </p>
+                <div class="clear20"></div>
+                <!--<a href="http://v.youku.com/v_show/id_XMTUxMDY1ODQ0OA==.html">-->
+                <div class="mm11_video_cover_w">
+                    <div id="videoElement1" class="mm11_video_cover">
+                        <p>播放器载入中...</p>
+                    </div>
+                </div>
+
+
+                <div class="clear80"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="mm_cc">
+            <div class="mm_ccc">
+                <div class="footer_left">
+                    Beecall©2017
+                </div>
+                <div class="footer_right">
+                    <a href="/?siteLanguage=zh" class="<%= (siteLanguage=='zh'?'footer_current':'') %>">中文版</a>
+                    <a href="/?siteLanguage=en" class="<%= (siteLanguage=='en'?'footer_current':'') %>">English</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var pageI18n = {
+        aboutSoma:"<%=i18n.mm11_0%>"
+    };
+</script>
+<script src="/static/res/lib/jquery-3.2.1.min.js"></script>
+<script src="/static/res/lib/swiper/swiper.min.js"></script>
+<script src="/static/res/lib/jwplayer/jwplayer.js"></script>
+<script>
+    $(function () {
+        function getClientWidth() {
+            var clientWidth = document.body.clientWidth;
+            return clientWidth;
+        }
+
+        var clientWidth = getClientWidth();
+        if (clientWidth < 900) {
+            $('.mm9_block').css({
+                width: clientWidth / 2 - 30
+            });
+        }
+
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        });
+
+        jwplayer.key="nepUPzTytAJg+wzuRfrqjqJOr93NJE0O3WHNUA==";
+
+        var playerInstance1 = jwplayer("videoElement1");
+        playerInstance1.setup({
+            file: '/static/res/images/video/soma_sf.mp4',
+            image: '/static/res/images/uis/video_cover.png',
+            width: "100%",
+            aspectratio: "16:9",
+            title: pageI18n.aboutSoma,
+            description: '',
+            mediaid: 'video2'
+        });
+    });
+</script>
+
+</body>
+</html>

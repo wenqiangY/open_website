@@ -1,0 +1,45 @@
+<header class="page-head">
+
+    <style>
+        .rd-navbar-nav li a{
+            font-size: 18px;
+            font-weight: normal !important;
+        }
+    </style>
+
+    <!-- RD Navbar-->
+    <div class="rd-navbar-wrap">
+        <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-stick-up-clone="true" data-md-stick-up-offset="120px" data-lg-stick-up-offset="120px" class="rd-navbar">
+            <div class="rd-navbar-inner">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                    <!-- RD Navbar Toggle-->
+                    <button data-rd-navbar-toggle=".rd-navbar-nav-wrap" class="rd-navbar-toggle"><span></span></button>
+                    <!-- RD Navbar Brand--><a href="/index.html" class="rd-navbar-brand">
+                    <div class="brand-logo">
+                        <img src="/images2/logo_132_132_chat.png" class="logo_openchat">
+                    </div>
+                    <div class="brand-name"><span class="text-white text-bold">Open</span><span>Chat</span></div></a>
+                </div>
+                <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                        <li class="<%=(cur==='index'?'active':'')%>">
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li class="<%=(cur==='about'?'active':'')%>">
+                            <a href="/about.html">Team</a>
+                        </li>
+                        <li class="<%=(cur==='preview'?'active':'')%>">
+                            <a href="/preview.html">Preview</a>
+                        </li>
+                        <li><a href="https://etherscan.io/token/0x442bc47357919446eabc18c7211e57a13d983469">Explorer</a></li>
+                        <li class="<%=(cur==='docs'?'active':'')%>">
+                            <a href="/docs/docs.html">Developer</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>

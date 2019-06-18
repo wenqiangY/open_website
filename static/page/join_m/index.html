@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>BeeChat</title>
+    <meta name="viewport"   content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta property="og:title" content="BeeChat"/>
+    <meta property="og:site_name" content="BeeChat"/>
+    <meta property="og:description" content="FREE group video, voice and messaging made for global communication"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta property="twitter:site" content="BeeChat"/>
+    <meta property="twitter:title" content="BeeChat"/>
+
+    <%- _includeStyle_ %>
+</head>
+<body>
+
+    <div class="display_content">
+        <a class="header" href="<%=download_link%>" >
+            <img class="header_logo" src="/static/res/images/uis_beechat/beechat_logo.png?v=4" alt="">
+            <div class="header_tips">
+                <%=i18n['don.t.have.soma']%>
+                <br>
+                <%=i18n['get.it.for.free']%>
+            </div>
+            <img class="header_arrow" src="/static/page/old_commons/images/ic_arrow_right2x.png?v=4" >
+        </a>
+        <div class="main_body">
+            <img src="/static/page/old_commons/images/grp_icon.png" width="66" height="42">
+            <div class="join_text"><%=i18n['you.are.invited.to']%></div>
+            <a class="join_button" id="join_button" href="#" target="_blank">
+                <%=i18n['join.group']%>
+            </a>
+        </div>
+        <select class="select_language" onchange="switchLanguage(this.options[this.selectedIndex].value)" >
+            <% for (var i=0;i< languageList.length ; i++) {  var langObj = languageList[i]; %>
+                <% if (langObj.lang === siteLanguage ) { %>
+                    <option selected value="<%=langObj['lang']%>" > <%=langObj['text']%></option>
+                <% } else { %>
+                    <option value="<%=langObj['lang']%>" > <%=langObj['text']%></option>
+                <% } %>
+            <% }%>
+        </select>
+    </div>
+
+
+
+    <div class="weixin_content">
+        <div class="wx_open">
+            <span class="wx_open_arrow"></span>
+            请点击右上角<br>
+            选择"复制链接",到浏览器中打开
+        </div>
+        <div style="height: 100px"></div>
+        <div style="width: 61px;margin: 0px auto;margin-bottom: 30px;">
+            <img width="61" src="/static/res/images/uis_beechat/beechat_logo.png?v=3" alt="">
+        </div>
+        <div style="text-align: center" class="wx_text">
+            微信/QQ内无法正常展示<br>
+            请在浏览器中打开此页面
+        </div>
+
+    </div>
+
+
+    <div class="taobao_content">
+        <div style="height: 100px"></div>
+        <div style="width: 61px;margin: 0px auto;margin-bottom: 30px;">
+            <img width="61" src="/static/res/images/uis_beechat/beechat_logo.png?v=3" alt="">
+        </div>
+        <div style="text-align: center;color: red;" class="wx_text">
+            此APP无法正确打开该页面<br>
+            请复制链接到浏览器中打开.
+        </div>
+    </div>
+
+
+
+    <div class="copy_right">
+        &copy; <%=year%> BeepLabs
+    </div>
+    <div id="tgme_frame_cont" style="position: absolute;left: -10000px;top: -10000px;"></div>
+    <script>
+        var isIPhone = '<%=isIPhone%>';
+        isIPhone = (isIPhone ==='true');
+        var download_link = '<%=download_link%>';
+        var download_link_android = '<%=download_link_android%>';
+        var download_link_ios = '<%=download_link_ios%>';
+        var group_name = '<%=group_name%>';
+
+    </script>
+    <script src="/static/res/lib/jquery-3.2.1.min.js"></script>
+    <%- _includeScript_ %>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+.idea/
+tmp/
+.DS_Store
+npm-debug.log
+package-lock.json
+deploy.sh
+rsync_exclude
+*.mp4
+download/
+.svn/
+.git
+openchat/
+tools/

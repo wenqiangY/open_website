@@ -1,0 +1,265 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, p, li, ul {
+    padding: 0;
+    margin: 0
+}
+
+html, body {
+    background: #122a38;
+    min-width: 1050px;
+    color: #8492A4;
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif
+}
+
+a {
+    color: #01bcd7;
+    text-decoration: none;
+    line-height: 20px
+}
+
+h2 {
+    line-height: 42px;
+    margin: 18px 0;
+    font-size: 30px;
+    display: block;
+    color: #2A394D;
+}
+
+.white-text {
+    color: #fff;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 34px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+h1, h2 {
+    font-family: "Cabin", Helvetica Neue, Sans-serif;
+    font-weight: 400;
+}
+
+.clear {
+    height: 1px;
+    clear: both
+}
+
+.clear40 {
+    height: 40px;
+    clear: both
+}
+
+.clear80 {
+    height: 80px;
+    clear: both
+}
+
+.clear50 {
+    height: 50px;
+    clear: both
+}
+
+.clear20 {
+    height: 20px;
+    clear: both
+}
+
+.clear10 {
+    height: 10px;
+    clear: both
+}
+
+.header {
+    height: 70px;
+    background: #ffffff;
+    width: 100%;
+    box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
+    border: none;
+    padding-top: 8px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header1 {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.footer {
+    font-size: 16px;
+    text-align: center;
+    padding: 30px 0;
+    background: #ffffff;
+}
+
+.header_logo_img {
+    width: 55px;
+    height: 55px;
+    display: block;
+    float: left;
+}
+
+.header_logo_name {
+    display: block;
+    font-size: 30px;
+    float: left;
+    line-height: 55px;
+    color: #586e6d;
+}
+
+.parallax {
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    height: 760px;
+}
+
+.parallax_bg {
+    background: url("/bc_dapp/images/bg.jpg");
+    width: 100%;
+    height: 760px;
+    /*transform: translate3d(-19.481px, -17.1125px, 0px);*/
+    /*transform-style: preserve-3d;*/
+    /*backface-visibility: hidden;*/
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    background-position: top center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.parallax_overlay {
+    width: 100%;
+    height: 760px;
+    background: #000000;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 2;
+}
+
+.parallax_content {
+    width: 100%;
+    height: 760px;
+    z-index: 3;
+    position: absolute;
+    top: 70px;
+}
+
+h2.intro {
+    font-size: 3rem;
+    line-height: 5rem;
+    text-align: center;
+}
+
+#intro-section {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.intro-section h5 {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.5;
+    line-height: 28px;
+    text-align: center;
+}
+
+.intro-section-btn {
+    display: block;
+    margin: 0 auto;
+    height: 60px;
+    width: 232px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 60px;
+    background-color: #00a5f9;
+    border-color: #2e6da4;
+    border-radius: 4px;
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.main_content {
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+}
+
+.main_content1 {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.main_content1 h1{
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 100px;
+    padding: 30px 0;
+}
+
+.main_content2{
+
+}
+
+.main_content2 h4{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #008ffd!important;
+}
+
+.main_content2 p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 30px;
+}
+
+.main_content2_block{
+    float: left;
+    width: 50%;
+    /*padding-right: ;*/
+}
+
+
+.main_content2_block_code{
+    float: left;
+    font-size: 16px;
+    white-space: pre;
+    display: block;
+    background: #333333;
+    padding: 20px;
+    font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+}
+
+.main_content2_block_code span{
+    color: #00a5bb;
+}
+
+.main_content2_block_code span.red_color{
+    color: #9a3b10;
+}
+
+
+.header-menus{
+    line-height: 55px;
+    float: right;
+}
+
+.header-menu-item{
+
+}

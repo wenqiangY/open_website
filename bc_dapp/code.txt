@@ -1,0 +1,10 @@
+<span>class</span> StoreContract <span>extends</span> EthereumContract { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span>private</span> data:EthMapping&lt;Address,Int32&gt;= {}; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;constructor(){} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span>setData</span>(name:<span>string</span>, value:<span>number</span>){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red_color">this</span>.data[name] = value;
+&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span>getData</span>(name : <span>string</span>){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red_color">return</span> this.data[name];
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}

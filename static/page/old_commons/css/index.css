@@ -1,0 +1,416 @@
+html{
+    font-size: 14px;
+}
+html, body, div, img, b {
+    margin: 0;
+    padding: 0;
+    font-family: Avenir,'HelveticaNeue','Roboto','Microsoft YaHei';
+}
+body{
+    display: none;
+}
+img{
+    display: block;
+}
+.clear {
+    clear: both;
+}
+
+.hime_content {
+    margin: 10% auto auto auto;
+    width: 931px;
+}
+
+.hime_header {
+    float: left;
+    margin-left: 77px;
+}
+
+.hime_header .logo img {
+    width: 80px;
+    height: 85px;
+    display: block;
+    position: relative;
+    left: -5px;
+}
+
+.hime_header .text1 {
+    font-size: 32px;
+    color: #6B7C93;
+    line-height: 40px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.hime_header .text2 {
+    font-size: 12px;
+    color: #2AB587;
+    line-height: 16px;
+    margin: 15px 0;
+}
+
+.hime_header .text2 b {
+    float: left;
+    display: block;
+    position: relative;
+    top: 4px;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-left: 8px solid #2AB587;
+    border-bottom: 4px solid transparent;
+}
+
+.hime_header .text2 span {
+    float: left;
+    display: block;
+    margin-left: 5px;
+}
+
+.hime_header .text2 i {
+    display: block;
+    clear: both;
+}
+
+.hime_header .text3 {
+    width: 448px;
+    clear: both;
+    color: #6B7C93;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.hime_header .text4 {
+    width: 2.35rem;
+    clear: both;
+    color: #6B7C93;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    display: none;
+}
+
+.download {
+    margin-top: 41px;
+}
+
+.hime_header .download_img {
+    width: 140px;
+    height: 41px;
+    display: block;
+    border: none;
+    float: left;
+    cursor: pointer;
+}
+
+.hime_header .download_img.google_play {
+    margin-left: 14px;
+}
+
+.hime_header .download_img.btn_iran {
+    margin-left: 14px;
+}
+
+.download_apk {
+    margin-top: 26px;
+}
+
+.download_btn {
+    cursor: pointer;
+    background: #FFFFFF;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #2AB587;
+    letter-spacing: 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 7px 0;
+    width: 294px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.hime_body_img {
+    float: right;
+    width: 1.35rem;
+    height: 2.01rem;
+}
+
+.hime_footer {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 68px;
+    position: fixed;
+    clear: both;
+    font-size: 13px;
+    color: rgba(106,123,146,0.50);
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px 1px rgba(194,193,193,0.50);
+}
+
+
+.footer_content{
+    margin: 0px 10% auto 10%;
+}
+
+.hime_footer .menu_list{
+    position: absolute;
+    left: 10%;
+}
+
+.hime_footer .footer_top1{
+    height: 20px;
+}
+
+.hime_footer .menu_list a {
+    color: rgba(106,123,146,0.50);
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 19px;
+}
+
+#home,#policy{
+    font-weight:bold;
+    color: rgba(106,123,146,1);
+}
+
+.hime_footer .copyright{
+    position: absolute;
+    right: 10%;
+    margin-right: 10px;
+    text-transform:uppercase;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.copyright_mobile{
+    margin: 10px;
+    text-align: center;
+    font-size: 16px;
+    text-transform:uppercase;
+    display: none;
+    color: rgba(106,123,146,0.50);   
+}
+
+.download_apk2{
+    /*display: none;*/
+    font-weight: 500;
+}
+
+.download_apk2_icon{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../images/ic_download.png");
+    background-size: cover;
+    position: relative;
+    top: 5px;
+}
+
+#mobileDownloadApkIron2{
+    margin: 0.54rem auto auto auto;
+    width: 3.00rem;
+}
+
+#mobileDownloadApk{
+    display: none;
+}
+
+#mobileDownloadIOS{
+    display: none;
+}
+
+.hime_content{
+    margin-bottom: 80px;
+}
+
+@media (max-width: 767px) {
+
+    #mobileDownloadApk {
+        display: block;
+    }
+
+    .hime_content {
+        width: 100%;
+        margin-top: 0px;
+        padding-top: 26px;
+        margin-bottom: 0px;
+    }
+
+    .hime_header {
+        float: none;
+        margin-left: 0px;
+    }
+
+    .hime_header .logo img {
+        width: 0.63rem;
+        height: 0.68rem;
+        border: none;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .hime_header .text1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .hime_header .text2 {
+        display: none;
+    }
+
+    .hime_header .text3 {
+        display: none;
+    }
+
+    .hime_header .text4 {
+        display: block;
+        text-align: center;
+    }
+
+    .download {
+        display: none;
+    }
+
+    .download_apk {
+        display: none;
+    }
+
+    .hime_body_img {
+        float: none;
+        margin: 21px auto auto auto;
+        display: block;
+        width: 1.93rem;
+        height: 2.88rem;
+    }
+
+    .hime_footer {
+        display: none;
+    }
+
+    .copyright_mobile {
+        display: block;
+    }
+
+    .download_apk2 {
+        display: block;
+        margin: 0.54rem auto auto auto;
+        width: 3.08rem;
+        height: 0.40rem;
+        line-height: 0.40rem;
+    }
+
+    #mobileDownloadApkIron2 {
+        margin: 0.48rem auto;
+        display: block;
+        width: 3.00rem;
+    }
+
+    #mobileDownloadApkIron1 {
+        margin: 0.48rem auto;
+    }
+
+    .isIos_true #mobileDownloadIOS {
+        display: block;
+    }
+
+    /*#mobileDownloadApkIron2 .download_img{*/
+    /*display: block;*/
+    /*}*/
+    #mobileDownloadApkIron2 .app_store {
+        width: 1.40rem;
+        height: 0.41rem;
+        margin: auto;
+    }
+
+    #mobileDownloadApkIron2 .google_play {
+        width: 1.40rem;
+        height: 0.41rem;
+        margin: auto;
+    }
+
+    #mobileDownloadApkIron2 .btn_iran {
+        width: 1.40rem;
+        height: 0.41rem;
+        margin-left: 0.14rem;
+    }
+
+    .isIos_false .app_store {
+        display: none;
+    }
+
+    .isIran_false .btn_iran_link {
+        display: none;
+    }
+
+    .isIran_false #iran_download_icon {
+        display: none;
+    }
+
+    .isIran_false.isIos_false .google_play_link {
+        width: 100%;
+        display: block;
+    }
+
+    .isIran_false.isIos_false #mobileDownloadApkIron2 .google_play {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 1.90rem;
+        height: 0.55rem;
+    }
+
+    .isIran_false.isIos_false #mobileDownloadApkIron2 .google_play_link {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 1.90rem;
+        height: 0.55rem;
+    }
+
+    .isIran_false.isIos_false #mobileDownloadApkIron1 {
+        display: none;
+    }
+
+    .isIran_false.isIos_false #mobileDownloadApkIron2 {
+        display: block;
+    }
+
+    .isIran_true.isIos_false #mobileDownloadApkIron2 {
+        display: none;
+
+    }
+
+    .isIran_true.isIos_false #mobileDownloadApkIron2 a {
+        display: inline-block;
+        float: left;
+    }
+
+    .isIran_true.isIos_false #mobileDownloadApkIron2 a.btn_iran_link {
+        margin-left: 0.14rem;
+    }
+
+    .isIran_true.isIos_false #mobileDownloadApkIron2 a .btn_iran {
+        margin-left: 0;
+    }
+
+    .isIos_true #mobileDownloadApk {
+        display: none;
+    }
+
+    .isIos_false #mobileDownloadIOS {
+        display: none;
+    }
+
+    .isIos_true #mobileDownloadIOS .download_img {
+        display: block;
+        width: 50%;
+        margin: 0.48rem auto;
+    }
+
+}
+
+
+.isIran_false #iran_download_icon{
+    display: none;
+}

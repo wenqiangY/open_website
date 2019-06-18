@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>BeeChat</title>
+
+    <meta name="viewport"
+          content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta property="og:title" content="BeeChat"/>
+    <meta property="og:site_name" content="BeeChat"/>
+    <meta property="og:description" content="FREE group video, voice and messaging made for global communication"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta property="twitter:site" content="BeeChat"/>
+    <meta property="twitter:title" content="BeeChat"/>
+
+    <link rel="stylesheet" href="/static/page/old_commons/css/old_main.css"/>
+    <link rel="stylesheet" href="/static/page/old_commons/css/old_custom.css"/>
+    <link rel="stylesheet" href="/static/page/old_commons/css/qrjoin.css?v=2">
+</head>
+<body style="display: none">
+<div class="display_content foot-wrapper">
+    <center>
+        <div id="mobile">
+            <div class="text-content text-content-001 LANGUAGE_PLACEHOLDER ">
+                <section class="article" style="padding-bottom:24px;">
+                    <div id="download_area" class="download  download-001">
+                        <a href="<%=download_link_android%>"><img
+                                class="applogo-001" src="/static/res/images/uis_beechat/beechat_logo.png?v=3"
+                                width="61"/></a>
+                        <a href="<%=download_link_android%>"><img
+                                style="float:right; margin-left:8px; margin-top:43px; margin-right:4px;"
+                                src="/static/page/old_commons/images/ic_arrow_right2x.png" width="9"/></a>
+                        <div class="vleading" style="font-size:1px;"></div>
+                        <a href="<%=download_link_ios%>" id="dl_ios">
+                            <span class="BeeChat_i18n" data-i18n="don.t.have.soma"></span> <br>
+                            <span class="BeeChat_i18n" data-i18n="get.it.for.free"></span>
+                        </a>
+                        <a id="dl_android" href="<%=download_link_android%>">
+                            <span class="BeeChat_i18n" data-i18n="don.t.have.soma"></span> <br>
+                            <span class="BeeChat_i18n" data-i18n="get.it.for.free"></span>
+                        </a>
+                    </div>
+                    <p style="text-align:center;margin-top:48px;">
+                        <img src="/static/page/old_commons/images/grp_icon.png" width="66" height="42"/>
+                    </p>
+                    <p style="text-align:center;margin-top:24px; font-size: 18px;padding-left:16px;padding-right:16px;">
+                        <span class="BeeChat_i18n" data-i18n="you.are.invited.to"></span>
+                    </p>
+                    <div class="content">
+                        <div class="download" style="padding-top:16px; padding-bottom:12px;">
+                            <a id="join_group_link_1" href="<%=download_link_android%>"
+                               class="BeeChat_i18n" data-i18n="join.group"
+                               style="background-color:#1B91F5 ; color:white; border-radius:6px; padding:16px 32px; min-width:205px; font-size:20px;">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="desktop">
+            <div class="text-content text-content-002 LANGUAGE_PLACEHOLDER ">
+                <section class="article article-001">
+                    <div class="content">
+                        <p class="content-001">
+                            <img src="/static/page/old_commons/images/grp_icon.png" width="66" height="42"/>
+                        </p>
+                        <p style="text-align:center;">
+                            <span class="BeeChat_i18n" data-i18n="you.are.invited.to"></span>
+                        </p>
+                        <div class="download" style="padding-top:24px; padding-bottom:48px;display: none;">
+                            <a id="join_group_link_2" href="<%=download_link_android%>"
+                               style="background-color:#1B91F5 ; color:white; border-radius:6px; padding:16px 32px; min-width:205px; font-size:20px;"
+                               class="BeeChat_i18n" data-i18n="join.group">
+                            </a>
+                        </div>
+                        <p style="text-align:center;margin-top:24px;display: none;">
+                            <span class="BeeChat_i18n" data-i18n="don.t.have.soma"></span>
+                            <span class="BeeChat_i18n" data-i18n="get.it.for.free"></span>
+                        </p>
+                        <div class="download" style="padding-top:16px; padding-bottom:12px;text-align: center;">
+                            <a id="dl_ios_desktop"
+                               href="<%=download_link_ios%>">
+                                <img src="/static/page/old_commons/images/btn_appstore.png">
+                            </a>
+                            <a id="dl_android_desktop"
+                               href="<%=download_link_android%>">
+                                <img src="/static/page/old_commons/images/btn_googleplay.png">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div><p id="user_agent" style="display:none;"></p></div>
+        <div id="app_iframe"></div>
+        <p class="normal-copyright"
+           style="font-size: 14px;display: inline-block;position: fixed;bottom: 18px;margin: 0 auto;width: 200px;left: 50%;margin-left: -100px;">
+            &copy; 2017 BeepLabs
+        </p>
+    </center>
+</div>
+
+
+<div class="display_content desktop-only">
+    <div class="language-container">
+        <div class="language-select" id="select002">
+        </div>
+    </div>
+</div>
+
+
+<div class="display_content mobile-only">
+    <div class="footer">
+        <div class="mobile-language-container">
+            <div id="select001">
+            </div>
+            <p class="copyright">&copy; <%=year%> BeepLabs</p>
+        </div>
+    </div>
+</div>
+
+<div class="weixin_content">
+    <div class="wx_open">
+        <span class="wx_open_arrow"></span>
+        请点击右上角<br>
+        选择"复制链接",到浏览器中打开
+    </div>
+    <div style="height: 100px"></div>
+    <div style="width: 61px;margin: 0px auto;margin-bottom: 30px;">
+        <img width="61" src="/static/res/images/uis_beechat/beechat_logo.png?v=3" alt="">
+    </div>
+    <div style="text-align: center" class="wx_text">
+        微信/QQ内无法正常展示<br>
+        请在浏览器中打开此页面
+    </div>
+
+</div>
+
+
+<div class="taobao_content">
+    <div style="height: 100px"></div>
+    <div style="width: 61px;margin: 0px auto;margin-bottom: 30px;">
+        <img width="61" src="/static/res/images/uis_beechat/beechat_logo.png?v=3" alt="">
+    </div>
+    <div style="text-align: center;color: red;" class="wx_text">
+        此APP无法正确打开该页面<br>
+        请复制链接到浏览器中打开.
+    </div>
+</div>
+
+
+
+
+<style>
+    .desktop-only .language-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .text-content a {
+        text-decoration: none;
+    }
+
+    #dl_android {
+        text-decoration: none;
+    }
+
+    .weixin_content{
+        display: none;
+        position: relative;
+    }
+
+
+    .wx_text{
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    .wx_open{
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        background: #00BCD7;
+        color: #ffffff;
+        font-size: 13px;
+        padding: 5px 10px;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 20px;
+    }
+
+    .wx_open_arrow{
+        position: absolute;
+        border: solid transparent;
+        border-bottom-color: #01bcd7;
+        border-width: 12px;
+        top: -21px;
+        right: 8px;
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+
+    .taobao_content{
+        display: none;
+        position: relative;
+    }
+</style>
+
+</body>
+<script>
+    var download_link_android = '<%=download_link_android%>';
+    var download_link_ios= '<%=download_link_ios%>'
+</script>
+<script type="text/javascript" src="/static/page/old_commons/dist/qrjoin_i18n.js?vx=2017103012x2"></script>
+<script type="text/javascript" src="/static/page/old_commons/js/common.js?vx=2017103012x2"></script>
+<script type="text/javascript" src="/static/page/old_commons/js/qrjoin.js?vx=2017103012x2"></script>
+</html>

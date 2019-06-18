@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%-i18n.title%></title>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        div {
+            box-sizing: border-box;
+        }
+
+        a {
+            color: #0077FF;
+            text-decoration: none;
+        }
+
+        .bc_title {
+            text-align: center;
+            font-weight: normal;
+            font-size: 30px;
+            margin: 10px 20px;
+            padding: 15px;
+        }
+
+        .logo_grey_copy {
+            width: 120px;
+            height: 120px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        .gray_line {
+            margin: 0px 10px;
+            border-bottom: 1px solid #EEEEEE;
+            height: 1px;
+        }
+
+        .install_button {
+            border: 0;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 400;
+            text-align: center;
+            position: relative;
+            background: #72c02c;
+            border-radius: 2px;
+            text-decoration: none;
+            margin: 0 auto;
+            display: block;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        #qrcodeTable {
+            width: 260px;
+            height: 260px;
+            margin: 20px auto;
+            background: #E5E5E5;
+            margin-bottom: 40px;
+        }
+
+        .desc {
+            font-size: 15px;
+            font-weight: 600;
+            color: #f00;
+            text-align: center;
+            white-space: pre-wrap;
+            margin-top: 10px;
+        }
+
+        .untrust_solution{
+            text-align: center;
+        }
+
+        .untrust_solution a{
+            color: #1abc9c;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1abc9c;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="mainBody">
+        <div class="bc_title">BeeChat</div>
+        <div class="gray_line"></div>
+        <img src="/static/res/images/logos/beechat1.png" class="logo_grey_copy" alt="">
+        <div class="gray_line" style="margin: 30px 0"></div>
+        <div class="untrust_solution">
+            <span style="text-align: center">Version：<%-ios_app_version%></span>
+            <a href="/ios_install_guide">"Untrusted Enterprise Developer" solution</a></div>
+        <div class="install_button"
+           id="install_button"
+           onclick="onclick_install_button()"
+           style="">
+            <%-i18n.click_to_install%>
+        </div>
+        <div id="title3" class="desc"><%-i18n.version_desc%></div>
+        <div id="qrcodeTable">
+            <img src="/static/page/ios_install_bc2/qrcode_ios_install_bc2.png" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        function onclick_install_button() {
+            if(confirm("<%-i18n.confirm_tips%>")){
+                var downloadUrl="itms-services://?action=download-manifest&url=<%-ios_plist_bc2%>";
+                window.location.href = downloadUrl;
+            }
+        }
+    </script>
+
+</body>
+</html>

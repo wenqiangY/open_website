@@ -1,0 +1,513 @@
+html,body,div,p,li,ul{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+#header{
+    display: block;
+    position: relative;
+}
+
+#introduction{
+    background:url("/static/page/bc2/images/introduct_bg.png") #f7f7f7;
+    width: 100%;
+    height: 472px;
+}
+
+.clear{
+    clear: both;
+    height: 1px;
+}
+.title2{
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 1px solid #317bed;
+    width: 150px;
+    line-height: 80px;
+    padding-top: 40px;
+    font-size: 30px;
+}
+
+.introduction_desc{
+    width: 700px;
+    margin: 0 auto;
+    color: #333333;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+}
+#new_feature{
+
+}
+
+.new_feature_column{
+    float: left;
+    width: 378px;
+}
+
+.new_feature_column2{
+    width: 203px;
+}
+
+.new_feature_content{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.feature_card{
+
+}
+
+.feature_card h3{
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+}
+
+.feature_card_img {
+    width: 376px;
+    height: 246px;
+}
+
+.feature_card_desc{
+    margin: 0 auto;
+    width: 336px;
+    height: 148px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 10px 0px rgba(172, 172, 172, 0.52);
+    position: relative;
+    top: -60px;
+    padding: 10px;
+}
+.feature_card_desc_text{
+    font-size: 14px;
+    color: #333333;
+}
+
+.new_feature_column2 img{
+    width: 109px;
+    height: 126px;
+    display: block;
+    margin: 0 auto;
+}
+
+.new_feature_column2_line{
+    display: block;
+    width: 1px;
+    height: 136px;
+    background-color: #327bed;
+    margin: 0 auto;
+}
+
+
+.road_map{
+
+}
+
+.road_map_list{
+    width: 350px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.road_map_item{
+    clear: both;
+}
+
+.road_map_time{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    font-size: 13px;
+    line-height: 30px;
+    border-left: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    float: left;
+    position: relative;
+}
+
+.road_map_time::before{
+    width: 6px;
+    height: 6px;
+    display: block;
+    background: #317bed;
+    border-radius: 10px;
+    position: absolute;
+    left: -3px;
+    bottom: -3px;
+    content: ' ';
+    z-index: 10;
+}
+
+.road_map_time_last::before{
+    content: none;
+    display: none;
+}
+
+.road_map_desc{
+    font-size: 14px;
+    float: left;
+    color: #333333;
+    position: relative;
+    top: 33px;
+    left: 9px;
+    line-height: 22px;
+}
+
+
+
+#footer{
+    height: 150px;
+    background: url("/static/page/bc2/images/footer_bg.png");
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+
+
+
+.language_select,.public_account_select{
+    right: 40px;
+    top: 20px;
+    position: absolute;
+
+}
+
+
+.language_drop ,.public_account_drop{
+    background: #FFFFFF;
+    box-shadow: 0 2px 7px 0 rgba(0,0,0,0.15);
+    border-radius: 4px;
+    padding: 10px 0px;
+    position: absolute;
+    left: 0px;
+    top: 37px;
+    display: none;
+}
+
+#language_dropdown span{
+    color: #0f1010;
+}
+
+.language_item ,.public_account_item{
+    position: relative;
+    margin: 0px 0px;
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0 10px;
+    width: 109px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.language_item:hover{
+    background: #EEE;
+}
+
+.language_item img{
+    width: 22px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+
+.language_current .language_item img.lang_arrow{
+    position: absolute;
+    top: 18px;
+    right: 0px;
+    width: auto;
+}
+
+
+.language_current .language_item{
+    margin: 0;
+}
+
+.language_current .language_item:hover{
+    background: none;
+}
+
+
+.header_content{
+    position: absolute;
+    top: 165px;
+    right: 150px;
+    /*width: 330px;*/
+    height: 50px;
+}
+
+
+.link_people1{
+    color: #ffffff;
+    font-size: 60px;
+    line-height: 65px;
+}
+.link_people2{
+    color: #ffffff;
+    font-size: 60px;
+    line-height: 65px;
+}
+.link_people3{
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+
+.xx_download_btns{
+    margin-top: 30px;
+}
+
+.xx_download_btn{
+    box-sizing: border-box;
+    display: block;
+    background: #fff;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.15);
+    font-family: Avenir-Heavy;
+    color: #317bed;
+    border-radius: 3px;
+    font-size: 16px;
+    letter-spacing: .8px;
+    text-align: center;
+    float: left;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+
+.siteLanguage_en .xx_download_btn{
+    font-size: 13px;
+    letter-spacing: 0px;
+    width: 170px;
+    box-sizing: border-box;
+}
+
+.goto_beechat1{
+    clear: both;
+    display: none;
+    float: left;
+    margin: 20px 0;
+    color: #FFF;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1300px) {
+
+    .link_people1{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .link_people2{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .link_people3{
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .xx_download_btns{
+        margin-top: 20px;
+    }
+
+    .xx_download_btn{
+
+    }
+}
+
+
+
+@media screen and (max-width: 1100px) {
+
+    .header_content{
+        position: absolute;
+        top: 165px;
+        right: 150px;
+    }
+    .link_people1{
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .link_people2{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .link_people3{
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .xx_download_btns{
+        margin-top: 20px;
+    }
+
+    .xx_download_btn{
+
+    }
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+
+    .header_content{
+        position: absolute;
+        top: 80px;
+        right: 150px;
+    }
+    .link_people1{
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .link_people2{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .link_people3{
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .xx_download_btns{
+        margin-top: 20px;
+    }
+
+    .xx_download_btn{
+
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+    .header_content{
+        position: absolute;
+        top: 180px;
+        right: 20px;
+        text-align: right;
+
+    }
+    .link_people1{
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .link_people2{
+        font-size: 25px;
+        line-height: 45px;
+    }
+    .link_people3{
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .xx_download_btns{
+        margin-top: 20px;
+        width: 100%;
+
+    }
+
+    .xx_download_btn{
+        margin: 0 auto;
+        display: block;
+        float: none;
+        margin-top: 10px;
+        max-width: 190px;
+    }
+
+    .goto_beechat1{
+        float: none;
+        text-align: right;
+        max-width: 190px;
+        margin: 10px auto;
+        padding: 10px 0;
+    }
+
+}
+
+
+
+@media screen and (min-width: 500px) {
+    .language_select, .public_account_select {
+        right: 140px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .introduction_desc{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .feature_card_sep{
+        display: none;
+    }
+
+    .new_feature_content{
+        width: 100%;
+    }
+    .new_feature_column{
+        float: none;
+        width: 100%;
+    }
+
+    .new_feature_column2{
+        display: none;
+    }
+
+    .feature_card_img{
+        width: 100%;
+    }
+    .feature_card_desc{
+        width: 90%;
+    }
+
+
+    .top_space{
+        display: none;
+    }
+
+    .road_map_list{
+        padding: 15px;
+        width: 100%;
+    }
+
+    .road_map_item{
+
+    }
+
+    .road_map_time::before{
+        bottom: 13px;
+    }
+
+    .road_map_time{
+        float: none;
+        border-left: none;
+        border-bottom: none;
+    }
+
+    .road_map_desc{
+        float: none;
+        top: 0;
+        left: 0;
+        padding-left: 10px;
+    }
+
+    .road_map_list{
+
+    }
+
+
+}
+
+

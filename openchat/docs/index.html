@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+
+<div id="mainBody">
+    <!--  <div class="mdblog-header">
+          <div class="headerWrapper">
+              <router-link to="/">
+                  <h1>Markdown Blog</h1>
+                  <p>Markdown Blog</p>
+              </router-link>
+              <div class="navigater">
+                  <ul class="nav">
+                      <li>
+                          <router-link to="/" class="active">文档</router-link>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>-->
+    <div class="mdblog-body">
+        <div class="mdblog-left-menu" >
+            <!--这里写菜单-->
+            <div class="mobileNav" v-if="mobileNavShow" :class="{'toggleActive':toggleActive}">
+                <div class="navToggle" id="navToggler" @click="showGroups"><i></i></div>
+                <h2>{{active}}</h2>
+            </div>
+            <div class="navGroups" v-if="show" v-bind:style="{height:contHeight + 'px'}">
+                <div class="navGroup" v-for="item in navList">
+                    <h3>{{item.title}}</h3>
+                    <ul v-for="mode in item.list">
+                        <li class="navListItem" v-on:click="active = mode.name">
+                            <router-link :to="mode.link" :class="{'current':active == mode.name}" @click.native="showGroups">
+                                {{mode.name}}
+                            </router-link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mdblog-right-content">
+            <router-view></router-view>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+
+<script src="./static/lib/vue.min.js"></script>
+<script src="./static/lib/vue-router.min.js"></script>
+<script src="./static/lib/jquery.min.js"></script>
+<script src="./static/lib/marked.min.js"></script>
+<script>
+
+
+    var MarkdownPage = {
+        template: "<div class='mdblog-mdhtmlpage' v-html='md_html'></div>",
+        data: function () {
+            return {
+                md_html: "loading...",
+            };
+        },
+        watch: {
+            $route: function (to, from) {
+                this.initComponent();
+            }
+        },
+        created: function () {
+            this.initComponent();
+        },
+        methods: {
+            initComponent: function () {
+                var that = this;
+                var route_params = that.$route.params;
+                var fileName = route_params['fileName'];
+                $.get("./markdowns/" + fileName).then(function (value) {
+                    that.md_html = marked(value);
+                });
+            },
+        }
+
+    };
+
+
+    var router = new VueRouter({
+        mode: "hash",//window.history.pushState ? 'history' : 'hash',
+        routes: [
+            {path: '/m/:fileName', component: MarkdownPage},
+            {path: '/*', redirect: "/m/intro-openchat-sdk.md"}
+        ],
+        scrollBehavior: function (to, from, savedPosition) {
+            if (savedPosition) {
+                return savedPosition
+            }
+            return {x: 0, y: 0}
+        }
+    });
+
+    var app = new Vue({
+        el: '#mainBody',
+        router: router,
+        data: function () {
+            return {
+                contHeight: 590,
+                active: 'OpenChat SDK',
+                show: true,
+                showMobile: false,
+                mobileNavShow: false,
+                toggleActive:false,
+                navList: [
+                    {
+                        title: 'OpenChat-Core',
+                        list: [
+                            {name: 'OpenChat SDK', link: 'OpenChat SDK.md'},
+                            {name: 'Install OpenChat SDK.md', link: 'Install OpenChat SDK.md'},
+                            {name: 'OpenChat Testnet.md', link: 'OpenChat Testnet.md'},
+                            {name: 'Transfer Gateway.md', link: 'Transfer Gateway.md'}
+                        ]
+                    },
+                    {
+                        title: 'Web3',
+                        list: [
+                            {name: 'Developer Tools For Web3', link: 'Developer Tools For Web3.md'}
+                        ]
+                    },
+                    {
+                        title: 'Connecting-Web3',
+                        list: [
+                            {name: 'Accessing Web3 Providers', link: 'Accessing Web3 Providers.md'}
+                        ]
+                    },
+                    {
+                        title: 'Submitting-Your-DApp',
+                        list: [
+                            {name: 'How To Submit.md', link: 'How To Submit.md'},
+                        ]
+                    },
+                    {
+                        title: 'Javascript-SDK',
+                        list: [
+                            {name: 'NodeJS Quickstart', link: 'NodeJS Quickstart.md'},
+                            {name: 'Web3 Provider Truffle', link: 'Web3 Provider Truffle.md'}
+                        ]
+                    },
+                    {
+                        title: 'Go-SDK',
+                        list: [
+                            {name: 'Go OpenChat SDK', link: 'Go OpenChat SDK.md'},
+                            {name: 'Go OpenChat Client', link: 'Go OpenChat Client.md'},
+                            {name: 'Go Smart Contracts', link: 'Go Smart Contracts.md'},
+                        ]
+                    },
+                    {
+                        title: 'Events',
+                        list: [
+                            {name: 'Events', link: 'Events.md'},
+                            {name: 'Web3 Events', link: 'Web3 Events.md'},
+                        ]
+                    },
+                    {
+                        title: 'Monitoring',
+                        list: [
+                            {name: 'Metrics', link: 'Metrics.md'},
+                            {name: 'Logging', link: 'Logging.md'},
+                        ]
+                    },
+                    {
+                        title: 'Solidity-EVM',
+                        list: [
+                            {name: 'EVM', link: 'EVM.md'},
+                            {name: 'Truffle', link: 'Truffle.md'},
+                        ]
+                    },
+                    {
+                        title: 'Transfer-Gateway',
+                        list: [
+                            {name: 'Transfer Gateway', link: 'Transfer-Gateway.md'},
+                        ]
+                    },
+                    {
+                        title: 'Deployment',
+                        list: [
+                            {name: 'Backend', link: 'Backend.md'},
+                            {name: 'Node Deployment', link: 'Node Deployment.md'},
+                            {name: 'Docker', link: 'Docker.md'},
+                        ]
+                    },
+                    {
+                        title: 'Block-Explorer',
+                        list: [
+                            {name: 'Block Explorer', link: 'Block Explorer.md'},
+                        ]
+                    }
+                ]
+            }
+        },
+        created: function () {
+            this.getContHeight();
+            this.resize();
+        },
+        methods: {
+            //获取内容高度
+            getContHeight: function () {
+                this.$nextTick(function () {
+                    var that = this
+                    var reEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
+                    var reFontSize = function () {
+                        var clientH = document.documentElement.clientHeight || document.body.clienHeigth
+                        var clientW = document.documentElement.clientWidth || document.body.clientWidth;
+                        if (!clientH) {
+                            return
+                        }
+                        if (clientW > 1000) {
+                            that.contHeight = clientH
+                        } else {
+                            that.contHeight = clientH - 48;
+                        }
+                    }
+                    window.addEventListener(reEvt, reFontSize)
+                    // DOMContentLoaded->dom加载完就执行,onload要dom/css/js都加载完才执行
+                    document.addEventListener('DOMContentLoaded', reFontSize)
+                })
+            },
+            //
+            resize: function () {
+                var that = this;
+                var html = document.getElementsByTagName("html")[0],
+                    reEvt = "orientationchange" in window ? "orientationchange" : "resize",
+                    reFontSize = function () {
+                        var clientW = document.documentElement.clientWidth || document.body.clientWidth;
+                        if (!clientW) {
+                            return;
+                        }
+                        if (clientW <= 1000) {
+                            that.mobileNavShow = true;
+                            that.show = false;
+                            html.style.fontSize = clientW / 20 + "px";
+                        }
+                        console.log(clientW);
+                    }
+                window.addEventListener(reEvt, reFontSize);
+                document.addEventListener("DOMContentLoaded", reFontSize);
+            },
+            showGroups:function(){
+                var clientW = document.documentElement.clientWidth || document.body.clientWidth;
+                if(clientW <= 1000) {
+                    this.show = !this.show;
+                    this.toggleActive = !this.toggleActive;
+                }
+            }
+        }
+    });
+    window.ubibiApp = app;
+
+</script>
+
+</html>

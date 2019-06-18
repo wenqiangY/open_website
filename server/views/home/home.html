@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>Beecall</title>
+    <link rel="stylesheet" href="/static/lib/swiper/swiper.min.css">
+    <link rel="stylesheet" href="/static/css/home.css?v=17">
+</head>
+<body class="language_<%- siteLanguage %>">
+
+<div class="mainContent">
+
+    <div id="header" class="mm_cc">
+        <img class="header_img" src="/static/images/uis/AD.png" alt="">
+    </div>
+    <div id="header_web">
+        <img class="header_img_web" src="/static/images/uis_web/AD.png" alt="">
+    </div>
+
+    <div id="mm1" class="mm_cc">
+        <p>Link People</p>
+        <p>Link Digital Life</p>
+    </div>
+
+    <div id="mm2" class="mm_cc">
+        <p><%- i18n.mm2_1 %></p>
+        <p><%- i18n.mm2_2 %></p>
+    </div>
+
+
+    <div id="mm4" class="mm_cc">
+        <a href="https://SOMA.im/"><%- i18n.mm4_1 %></a>
+
+        <% if(siteLanguage==='zh') { %>
+        <a href="/static/download/white_paper_zh.pdf" class="white_paper">
+            <%- i18n.mm4_2 %>
+        </a>
+        <%} else {%>
+        <a href="/static/download/white_paper_en.pdf" class="white_paper">
+            <%- i18n.mm4_2 %>
+        </a>
+        <%}%>
+
+        <div class="clear"></div>
+    </div>
+
+    <div>
+
+    </div>
+
+
+    <div id="mm5" class="mm_cc">
+        <div class="mm_ccw">
+            <h2><%- i18n.mm5_1 %> </h2>
+            <p>
+                <%- i18n.mm5_2 %>
+            </p>
+        </div>
+    </div>
+
+
+    <div id="mm6" class="mm_cc">
+        <div class="mm_ccw">
+            <h2>
+                <%- i18n.mm6_1 %>
+            </h2>
+            <div class="mm6_content">
+                <div id="mm6_bg">
+                    <div class="mm6_bg1"></div>
+                </div>
+                <div class="mm6_swiper">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><div class="mm6_swiper_content"><%- i18n.mm6_01 %></div></div>
+                            <div class="swiper-slide"><div class="mm6_swiper_content"><%- i18n.mm6_02 %></div></div>
+                            <div class="swiper-slide"><div class="mm6_swiper_content"><%- i18n.mm6_03 %></div></div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="mm14" class="mm_cc">
+
+        <div class="mm_ccw">
+            <h2>
+                <%- i18n.mm14_1 %>
+            </h2>
+            <p>
+                <%- i18n.mm14_2 %>
+            </p>
+            <p>
+                <%- i18n.mm14_3 %>
+            </p>
+        </div>
+
+    </div>
+
+
+
+    <div id="mm8_web" class="mm_cc">
+        <img src="/static/images/uis_web/ic_group_chat_2x.png" style="width: 768px" alt="">
+    </div>
+
+
+    <div id="mm8" class="mm_cc">
+
+        <div class="mm8_chat mm8_chat_left">
+            <img class="avatar" src="/static/images/uis/ic_avatar1@2x.png" alt="">
+            <img class="dialog" src="/static/images/uis/ic_dialogueic1@2x.png" alt="">
+        </div>
+
+        <div class="clear20"></div>
+
+        <div class="mm8_chat mm8_chat_right">
+            <img class="avatar" src="/static/images/uis/ic_avatar2@2x.png" alt="">
+            <img class="dialog" src="/static/images/uis/ic_dialogueic2@2x.png" alt="">
+        </div>
+
+        <div class="clear20"></div>
+
+        <div class="mm8_chat mm8_chat_left">
+            <img class="avatar" src="/static/images/uis/ic_avatar3@2x.png" alt="">
+            <img class="dialog" src="/static/images/uis/ic_dialogueic3@2x.png" alt="" style="width:145px;">
+        </div>
+
+        <div class="clear20"></div>
+
+        <div class="mm8_chat mm8_chat_right">
+            <img class="avatar" src="/static/images/uis/ic_avatar4@2x.png" alt="">
+            <img class="dialog" src="/static/images/uis/ic_dialogueic4@2x.png" alt="">
+        </div>
+
+        <div class="clear20"></div>
+
+        <div class="mm8_chat mm8_chat_left">
+            <img class="avatar" src="/static/images/uis/ic_avatar5@2x.png" alt="">
+            <img class="dialog" src="/static/images/uis/ic_dialogueic5@2x.png" alt="">
+        </div>
+
+        <div class="clear20"></div>
+
+    </div>
+
+
+    <div id="mm15" class="mm_cc">
+        <div class="mm_ccw">
+            <h2>
+                <%- i18n.mm15_1 %>
+            </h2>
+            <p>
+                <%- i18n.mm15_2 %>
+            </p>
+        </div>
+
+    </div>
+
+
+    <div id="mm9" class="mm_cc">
+        <div class="mm_ccw">
+            <h2>
+                <%- i18n.mm9_0 %>
+            </h2>
+            <div class="mm9_cc">
+                <div class="mm9_block mm9_block_left">
+                    <div class="mm9_icon">
+                        <img src="/static/images/uis_web/ic_information.png" alt="">
+                    </div>
+                    <div class="h3w">
+                        <div class="h3">
+                            <%- i18n.mm9_1 %>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mm9_block mm9_block_right">
+                    <div class="mm9_icon">
+                        <img src="/static/images/uis_web/ic_reward.png" alt="">
+                    </div>
+                    <div class="h3w">
+                        <div class="h3">
+                            <%- i18n.mm9_2 %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear20 mm9_cc_md"></div>
+
+            <div class="mm9_cc">
+                <div class="mm9_block mm9_block_left">
+                    <div class="mm9_icon">
+                        <img src="/static/images/uis_web/ic_exchange.png" alt="">
+                    </div>
+                    <div class="h3w">
+                        <div class="h3">
+                            <%- i18n.mm9_3 %>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mm9_block mm9_block_right mm9_block_last">
+                    <div class="mm9_icon">
+                        <img src="/static/images/uis_web/ic_aid.png" alt="">
+                    </div>
+                    <div class="h3w">
+                        <div class="h3">
+                            <%- i18n.mm9_4 %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear20"></div>
+        </div>
+    </div>
+
+
+    <div id="mm11" >
+        <div class="mm_cc">
+            <div class="mm_ccw">
+                <div class="clear"></div>
+                <h2 class="about_soma">
+                    <%- i18n.mm11_0 %>
+                </h2>
+                <p>
+                    <%- i18n.mm11_1 %>
+                </p>
+                <p>
+                    <%- i18n.mm11_2 %>
+                </p>
+                <div class="clear20"></div>
+                <!--<a href="http://v.youku.com/v_show/id_XMTUxMDY1ODQ0OA==.html">-->
+                <div class="mm11_video_cover_w">
+                    <div id="videoElement1" class="mm11_video_cover">
+                        <p>播放器载入中...</p>
+                    </div>
+                </div>
+
+
+                <div class="clear80"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="mm_cc">
+            <div class="mm_ccc">
+                <div class="footer_left">
+                    Beecall©2017
+                </div>
+                <div class="footer_right">
+                    <a href="/?siteLanguage=zh" class="<%= (siteLanguage=='zh'?'footer_current':'') %>">中文版</a>
+                    <a href="/?siteLanguage=en" class="<%= (siteLanguage=='en'?'footer_current':'') %>">English</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var pageI18n = {
+        aboutSoma:"<%=i18n.mm11_0%>"
+    };
+</script>
+<script src="/static/lib/jquery-3.2.1.min.js"></script>
+<script src="/static/lib/swiper/swiper.min.js"></script>
+<script src="/static/lib/jwplayer/jwplayer.js"></script>
+<script src="/static/src/home_mobile.js?v=1"></script>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BeeChat</title>
+    <%- _includeStyle_ %>
+</head>
+<body>
+
+<div class="header">
+
+
+
+
+    <div class="language_select">
+
+        <div class="language_current">
+            <div class="language_item">
+                <img src="/static/res/images/uis_beechat/<%-languageCurrent.ic%>.png" >
+                <span><%-languageCurrent.text%></span>
+                <img class="lang_arrow" src="/static/res/images/uis_beechat/lang_arrow.png" alt="">
+            </div>
+        </div>
+
+        <div class="language_drop">
+            <% for(var i=0; i < languageList.length;i++ ){ var languageItem = languageList[i]; %>
+                <a class="language_item" href="?siteLanguage=<%-languageItem.lang%>">
+                    <img src="/static/res/images/uis_beechat/<%-languageItem.ic%>.png" >
+                    <span><%-languageItem.text%></span>
+                </a>
+            <% } %>
+        </div>
+    </div>
+
+
+
+    <div class="public_account_select">
+        <div class="public_account_current">
+            <div class="public_account_item">
+                <%=i18n.public_account%>
+            </div>
+        </div>
+
+        <div class="public_account_drop">
+            <a class="public_account_item" href="https://mp.ibeechat.net" target="_blank">
+                <%=i18n.public_account_apply%>
+            </a>
+            <a class="public_account_item" href="https://www.ibeechat.net" target="_blank">
+                <%=i18n.public_account_login%>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<div class="mainContent">
+    <div class="cover">
+        <img src="/static/res/images/uis_beechat/big_bg111.jpg" alt="">
+    </div>
+    <div class="middle"></div>
+    <div class="desc">
+        <div class="text">
+            <%-i18n.title1%>
+        </div>
+        <div class="text">
+            <%-i18n.title2%>
+        </div>
+        <div class="text3">
+            <%-i18n.title3%>
+        </div>
+        <div class="text4">
+            <%-i18n.title4%>
+        </div>
+
+        <div class="clear" style="height: 57px"></div>
+        <div class="download" >
+            <a href="javascript:void 0;" style="margin-right: 15px;opacity: 0.6;cursor: not-allowed;">
+                <img src="/static/res/images/uis_beechat/btn_appstore.png" alt="">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.beeplabs.beechat" target="_blank">
+                <img src="/static/res/images/uis_beechat/btn_googleplay.png" alt="">
+            </a>
+        </div>
+
+        <div class="clear"></div>
+        <div class="download download2">
+            <a href="<%=download_link_ios%>" style="margin-right: 15px">
+                <%=i18n.ios_down%>
+            </a>
+
+            <span id="download_link_android_loading">
+               loading...
+            </span>
+
+            <a href="<%=download_link_android%>" id="download_link_android" style="display: none">
+                <%=i18n.apk_down%>
+            </a>
+
+        </div>
+
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+
+<div class="mainContent2">
+    <div class="product_into">
+        <h2>
+            <%-i18n.h1%>
+        </h2>
+        <div class="product_into_content">
+            <%-i18n.c1%>
+        </div>
+
+
+        <% if(i18n.pressList && i18n.pressList.length > 0) { %>
+            <h2>
+                <%-i18n.pressTitle%>
+            </h2>
+            <div class="product_into_content">
+                <ul class="pressList">
+                <% for (var i = 0; i < i18n.pressList.length; i++) { var obj = i18n.pressList[i]; %>
+                    <li>
+                        <a class="press_item" target="_blank" href="<%= obj['url']%>"><%-obj['text']%></a>
+                    </li>
+                <% } %>
+                </ul>
+            </div>
+        <% } %>
+
+
+    </div>
+    <div class="product_img">
+        <img src="/static/res/images/uis_beechat/ic_she.png" alt="">
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+
+
+<% if(i18n.lang!=='jp'){ %>
+
+    <div class="mainContent2" style="margin-top: 122px">
+        <h2 style="text-align: center"><%-i18n.main_func_title%></h2>
+        <img src="/static/res/images/uis_beechat/ic_product_advantage.jpg" alt=""
+             style="width: 450px;display: block;float: left;margin-top: 30px">
+        <div style="float: left; margin: 20px 0 0 50px; line-height: 35px;font-size: 20px;width: 544px;">
+            <%-i18n.main_func_content%>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+
+
+
+
+
+<div class="mainContent2" style="margin-top: 122px">
+    <h2 style="text-align: center"><%-i18n.product_feature_title%></h2>
+    <div class="advantage_btn" style="margin-top: 50px;">
+        <button class="advantage_button" id="advantage_button_1" data-id="1"> <%-i18n.product_feature_title1%> </button>
+        <button class="advantage_button" id="advantage_button_2" data-id="2">  <%-i18n.product_feature_title2%>  </button>
+        <button class="advantage_button" id="advantage_button_3" data-id="3" style="margin-right: 0"> <%-i18n.product_feature_title3%>  </button>
+    </div>
+    <div class="clear"></div>
+
+    <div class="advantage_content" id="advantage_content_1">
+        <div class="advantage_content_t">
+            <%-i18n.product_feature_content1%>
+        </div>
+        <div class="advantage_content_img">
+            <img src="/static/res/images/uis_beechat/ic_product_advantage.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="advantage_content" id="advantage_content_2">
+        <div class="advantage_content_t">
+            <%-i18n.product_feature_content2%>
+        </div>
+        <div class="advantage_content_img">
+            <img src="/static/res/images/uis_beechat/ic_advantage.jpg" alt="">
+        </div>
+    </div>
+
+
+    <div class="advantage_content" id="advantage_content_3">
+        <div class="advantage_content_t">
+            <%-i18n.product_feature_content3%>
+        </div>
+        <div class="advantage_content_img">
+            <img src="/static/res/images/uis_beechat/ic_advantage.jpg" alt="">
+        </div>
+    </div>
+
+
+    <div class="clear"></div>
+</div>
+
+<%}%>
+
+
+
+<% if(i18n.lang=='jp'){ %>
+
+<div class="mainContent2" style="margin-top: 122px">
+    <h2 style="text-align: center"><%-i18n.h2%></h2>
+    <div class="advantage_btn" style="margin-top: 50px;">
+        <button class="advantage_button" id="advantage_button_1" data-id="1" style="width: 250px;"> <%-i18n.c2_1%> </button>
+        <button class="advantage_button" id="advantage_button_2" data-id="2" style="width: 250px;margin-right: 0"> <%-i18n.c2_3%></button>
+    </div>
+    <div class="clear"></div>
+
+    <div class="advantage_content" id="advantage_content_1">
+        <div class="advantage_content_t">
+            <p> <%-i18n.c2_1_1%> </p>
+            <p> <%-i18n.c2_2_1%> </p>
+        </div>
+        <div class="advantage_content_img">
+            <img src="/static/res/images/uis_beechat/ic_product_advantage.png" alt="">
+        </div>
+    </div>
+
+    <div class="advantage_content" id="advantage_content_2">
+        <div class="advantage_content_t">
+            <p> <%-i18n.c2_3_1%> </p>
+            <p> <%-i18n.c2_4_1%> </p>
+        </div>
+        <div class="advantage_content_img">
+            <img src="/static/res/images/uis_beechat/ic_advantage.png" alt="">
+        </div>
+    </div>
+
+
+    <div class="clear"></div>
+
+</div>
+
+<%}%>
+
+
+
+
+<div style="background-color: #F9FAFC">
+    <div class="mainContent2" style="margin-top: 122px;">
+        <h2 style="text-align: center;padding: 100px 0 50px 0;"><%-i18n.h3%></h2>
+
+        <div class="screen_shot_list">
+            <img src="/static/res/images/uis_beechat/screenshot/4.jpg" alt="" >
+            <img src="/static/res/images/uis_beechat/ic_screenshot111.jpg" alt="">
+            <img class="last" src="/static/res/images/uis_beechat/screenshot/1.jpg" alt="">
+            <div class="clear"></div>
+        </div>
+
+        <div class="screen_shot_list" style="width: 615px;margin-top: 50px">
+            <img src="/static/res/images/uis_beechat/screenshot/2.jpg" alt="" >
+            <img class="last" src="/static/res/images/uis_beechat/ic_screenshot_new_5.jpg" alt="" >
+            <div class="clear"></div>
+        </div>
+
+        <div class="official_website_btn" style="visibility: hidden">
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<div class="mainContent2" style="margin-top: 50px;margin-bottom: 200px;">
+    <h2 style="text-align: center;padding: 0px 0 50px 0;"><%-i18n.video_title%></h2>
+    <video style="width:600px;margin: 0 auto;display: block" controls="controls">
+        <source src="<%-i18n.video_url%>" type="video/mp4">
+    </video>
+</div>
+
+
+
+
+<div class="footer"> &copy; <%-year%> BeeLabs</div>
+
+<!--<script src="/static/res/lib/jquery-3.2.1.min.js"></script>-->
+<script src="https://npm.elemecdn.com/jquery@3.3.1/dist/jquery.min.js"></script>
+<script>
+    var isAndroid = ('<%=isAndroid%>'=='true');
+    var download_link_android = '<%=download_link_android%>';
+    var download_link_android_alien = '<%=download_link_android_alien%>';
+</script>
+
+
+<%- _includeScript_ %>
+
+
+<!--<div style="display: none">-->
+
+    <!--<script src="https://s22.cnzz.com/z_stat.php?id=1272836717&web_id=1272836717" language="JavaScript"></script>-->
+
+<!--</div>-->
+
+</body>
+</html>
